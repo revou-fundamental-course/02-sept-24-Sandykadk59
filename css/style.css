@@ -1,0 +1,16 @@
+.headerh1,
+.headerp {
+  text-align: center;
+}
+
+.choosebutton {
+  display: flex;
+  flex-direction: column;
+}
+
+.button_rumus {
+  height: 35px;
+  margin: 5px;
+  border-radius: 8px;
+  border: none;
+}
