@@ -1,54 +1,72 @@
-// Fungsi untuk menampilkan konten segitiga
-function segitiga() {
-  document.getElementById("segitiga_content").style.display = "block";
-  document.getElementById("jajargenjang_content").style.display = "none";
-  // resetJajargenjang();
+// Fungsi untuk menampilkan konten luas segitiga
+function luas() {
+  document.getElementById("luas_content").style.display = "block";
+  document.getElementById("keliling_content").style.display = "none";
+  resetKeliling();
+
+  setActiveButton("btn_luas");
 }
 
-// Fungsi untuk menampilkan konten jajar genjang
-function jajarGenjang() {
-  document.getElementById("segitiga_content").style.display = "none";
-  document.getElementById("jajargenjang_content").style.display = "block";
-  // resetSegitiga();
+// Fungsi untuk menampilkan konten keliling segitiga
+function keliling() {
+  document.getElementById("luas_content").style.display = "none";
+  document.getElementById("keliling_content").style.display = "block";
+  resetLuas();
+
+  setActiveButton("btn_keliling");
+}
+
+// Fungsi untuk mengatur class active
+function setActiveButton(buttonId) {
+  // Menghapus kelas active dari semua tombol
+  const buttons = document.querySelectorAll(".button_rumus");
+  buttons.forEach((button) => button.classList.remove("active"));
+
+  // Menambahkan kelas active pada tombol yang dipilih
+  document.getElementById(buttonId).classList.add("active");
 }
 
 // Tampilan default ketika halaman dibuka
 window.onload = function () {
-  segitiga();
+  luas();
 };
 
 // Fungsi Hitung Luas Segitiga
-function hitungSegitiga() {
-  let alas = document.getElementById("alas_segitiga").value;
-  let tinggi = document.getElementById("tinggi_segitiga").value;
-  let luas = 0.5 * alas * tinggi;
+function hitungLuas() {
+  let alas1 = document.getElementById("alas").value;
+  let tinggi1 = document.getElementById("tinggi").value;
+  let luas = 0.5 * alas1 * tinggi1;
 
-  document.getElementById("detail_hitung_segitiga").innerHTML = `L = 1/2 * a * t <br> L = 1/2 * ${alas} * ${tinggi}`;
-  document.getElementById("hasil_segitiga").innerHTML = "L = " + luas;
+  document.getElementById("detail_luas").innerHTML = `L = 1/2 * a * t <br> L = 1/2 * ${alas1} * ${tinggi1}`;
+  document.getElementById("hasil_luas").innerHTML = "L = " + luas;
 }
 
-// Fungsi Hitung Luas Jajar Genjang
-function hitungJajargenjang() {
-  let alas = document.getElementById("alas_jajargenjang").value;
-  let tinggi = document.getElementById("tinggi_jajargenjang").value;
-  let luas = alas * tinggi;
+// Fungsi Hitung Keliling Segitiga
+function hitungKeliling() {
+  let sisi1 = document.getElementById("sisi1").value;
+  let sisi2 = document.getElementById("sisi2").value;
+  let sisi3 = document.getElementById("sisi3").value;
+  let keliling = parseFloat(sisi1) + parseFloat(sisi2) + parseFloat(sisi3);
 
-  document.getElementById("detail_hitung_jajargenjang").innerHTML = `L = a * t <br> L = ${alas} * ${tinggi}`;
-  document.getElementById("hasil_jajargenjang").innerHTML = "L = " + luas;
+  document.getElementById("detail_keliling").innerHTML = `K = a + b + c <br> K = ${sisi1} + ${sisi2} + ${sisi3}`;
+  document.getElementById("hasil_keliling").innerHTML = "K = " + keliling;
 }
 
-// Fungsi Button Reset Segitiga
-function resetSegitiga() {
-  document.getElementById("alas_segitiga").value = "";
-  document.getElementById("tinggi_segitiga").value = "";
-  document.getElementById("detail_hitung_segitiga").innerHTML = "";
-  document.getElementById("hasil_segitiga").innerHTML = "";
+// Fungsi Button Reset Luas Segitiga
+function resetLuas() {
+  document.getElementById("alas").value = "";
+  document.getElementById("tinggi").value = "";
+
+  document.getElementById("detail_luas").innerHTML = "";
+  document.getElementById("hasil_luas").innerHTML = "";
 }
 
-// Fungsi Button Reset Jajar Genjang
-function resetJajargenjang() {
-  document.getElementById("alas_jajargenjang").value = "";
-  document.getElementById("tinggi_jajargenjang").value = "";
-  document.getElementById("detail_hitung_jajargenjang").innerHTML = "";
-  document.getElementById("hasil_jajargenjang").innerHTML = "";
+// Fungsi Button Reset Keliling Segitiga
+function resetKeliling() {
+  document.getElementById("sisi1").value = "";
+  document.getElementById("sisi2").value = "";
+  document.getElementById("sisi3").value = "";
+
+  document.getElementById("detail_keliling").innerHTML = "";
+  document.getElementById("hasil_keliling").innerHTML = "";
 }

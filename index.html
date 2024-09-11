@@ -5,26 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mini Project RevoU</title>
     <link rel="stylesheet" href="css/style.css" />
-    <script src="js/index.js"></script>
+    <script src="js/index.js" defer></script>
   </head>
   <body>
     <!-- Header -->
     <header>
       <h1 class="headerh1">Selamat Datang di Kalkulator Matematika</h1>
-      <p class="headerp">Disini kalian bisa menghitung rumus Segitiga dan juga Jajar Genjang</p>
+      <p class="headerp">Disini kalian bisa menghitung rumus Luas dan Keliling Segitiga</p>
       <p class="headerp">Kalian bisa langsung menggunakan kalkulator ini dengan klik menu dibawah</p>
     </header>
 
     <!-- Main -->
     <main>
       <section class="choosebutton">
-        <button href="#" type="button" class="button_rumus" onclick="segitiga()">Segitiga</button>
-        <button href="#" type="button" class="button_rumus" onclick="jajarGenjang()">Jajar Genjang</button>
+        <button type="button" id="btn_luas" class="button_rumus" onclick="luas()">Luas Segitiga</button>
+        <button type="button" id="btn_keliling" class="button_rumus" onclick="keliling()">Keliling Segitiga</button>
       </section>
 
-      <!-- Segitiga -->
+      <!-- Luas Segitiga -->
       <section class="konten">
-        <aside id="segitiga_content" class="isikonten">
+        <aside id="luas_content" class="isikonten">
           <header>
             <h1 class="header_atas">Luas Segitiga</h1>
           </header>
@@ -39,7 +39,6 @@
 
             <div class="info_rumus_luas_segitiga">
               <p>Rumus Luas Segitiga</p>
-
               <p>Di mana :</p>
               <p>L = Luas</p>
               <p>a = Panjang Alas</p>
@@ -53,58 +52,59 @@
               <h1 class="header_bawah">Hitung Luas Segitiga</h1>
             </header>
 
-            <label for="alas_segitiga">Alas Segitiga</label><br />
-            <input type="number" class="alas_segitiga" id="alas_segitiga" name="alas_segitiga" /><br /><br />
-            <label for="tinggi_segitiga">Tinggi Segitiga</label><br />
-            <input type="number" class="tinggi_segitiga" id="tinggi_segitiga" name="tinggi_segitiga" /><br />
+            <label for="alas">Alas Segitiga</label><br />
+            <input type="number" class="alas" id="alas" name="alas" /><br /><br />
+            <label for="tinggi">Tinggi Segitiga</label><br />
+            <input type="number" class="tinggi" id="tinggi" name="tinggi" /><br />
 
-            <button type="button" class="button_hitung" id="hitung_segitiga" onclick="hitungSegitiga()">Hitung</button>
+            <button type="button" class="button_hitung" id="hitung_luas" onclick="hitungLuas()">Hitung</button>
 
-            <p id="detail_hitung_segitiga"></p>
-            <p id="hasil_segitiga"></p>
+            <p id="detail_luas"></p>
+            <p id="hasil_luas"></p>
           </form>
-          <button class="btn_reset" onclick="resetSegitiga()">Reset</button>
+          <button class="btn_reset" onclick="resetLuas()">Reset</button>
         </aside>
 
-        <!-- Jajar Genjang -->
-        <aside id="jajargenjang_content" class="isikonten">
+        <!-- Keliling Segitiga -->
+        <aside id="keliling_content" class="isikonten">
           <header>
-            <h1 class="header_atas">Luas Jajar Genjang</h1>
+            <h1 class="header_atas">Keliling Segitiga</h1>
           </header>
 
           <article>
-            <div class="rumus_luas_jajargenjang">
-              <img src="https://i.pinimg.com/564x/7e/11/16/7e1116b65eab976c92e9592d2f903cbf.jpg" alt="Rumus Luas Jajar Genjang" class="jajargenjang_img" />
+            <div class="rumus_keliling_segitiga">
+              <img src="https://i.pinimg.com/564x/38/3b/ef/383bef2d4d0cfb323a05e32931b349d8.jpg" alt="Rumus Keliling Segitiga" />
             </div>
 
-            <div class="info_rumus_luas_jajargenjang">
-              <p>Rumus Luas Jajar Genjang</p>
-
+            <div class="info_rumus_keliling_segitiga">
+              <p>Rumus Keliling Segitiga</p>
               <p>Di mana :</p>
-              <p>L = Luas</p>
-              <p>a = Panjang Alas</p>
-              <p>t = Tinggi</p>
-
+              <p>K = Keliling</p>
+              <p>a = Sisi 1</p>
+              <p>b = Sisi 2</p>
+              <p>c = Sisi 3</p>
               <hr />
             </div>
           </article>
 
           <form>
             <header>
-              <h1 class="header_bawah">Hitung Luas Jajar Genjang</h1>
+              <h1 class="header_bawah">Hitung Keliling Segitiga</h1>
             </header>
 
-            <label for="alas_jajargenjang">Alas Jajar Genjang</label><br />
-            <input type="number" class="alas_jajargenjang" id="alas_jajargenjang" name="alas_jajargenjang" /><br /><br />
-            <label for="tinggi_jajargenjang">Tinggi Jajar Genjang</label><br />
-            <input type="number" class="tinggi_jajargenjang" id="tinggi_jajargenjang" name="tinggi_jajargenjang" /><br />
+            <label for="sisi1">Sisi 1</label><br />
+            <input type="number" class="sisi1" id="sisi1" name="sisi1" /><br />
+            <label for="sisi2">Sisi 2</label><br />
+            <input type="number" class="sisi2" id="sisi2" name="sisi2" /><br />
+            <label for="sisi3">Sisi 3</label><br />
+            <input type="number" class="sisi3" id="sisi3" name="sisi3" /><br />
 
-            <button type="button" class="button_hitung" id="hitung_jajargenjang" onclick="hitungJajargenjang()">Hitung</button>
+            <button type="button" class="button_hitung" id="hitung_keliling" onclick="hitungKeliling()">Hitung</button>
 
-            <p id="detail_hitung_jajargenjang"></p>
-            <p id="hasil_jajargenjang"></p>
+            <p id="detail_keliling"></p>
+            <p id="hasil_keliling"></p>
           </form>
-          <button class="btn_reset" onclick="resetJajargenjang()">Reset</button>
+          <button class="btn_reset" onclick="resetKeliling()">Reset</button>
         </aside>
       </section>
     </main>

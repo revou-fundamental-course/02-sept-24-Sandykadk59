@@ -8,6 +8,7 @@
 .choosebutton {
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
 }
 
 .button_rumus {
@@ -15,6 +16,11 @@
   margin: 5px;
   border-radius: 8px;
   border: none;
+}
+
+.button_rumus.active {
+  background-color: rgb(0, 46, 96);
+  color: rgb(255, 255, 255);
 }
 
 .konten {
@@ -44,14 +50,14 @@
 }
 
 .isikonten article .rumus_luas_segitiga,
-.isikonten article .rumus_luas_jajargenjang {
+.isikonten article .rumus_keliling_segitiga {
   background-size: cover;
   background-position: center;
   align-self: center;
 }
 
 .isikonten article .info_rumus_luas_segitiga,
-.isikonten article .info_rumus_luas_jajargenjang {
+.isikonten article .info_rumus_keliling_segitiga {
   padding-left: 40px;
   padding-right: 40px;
 }
