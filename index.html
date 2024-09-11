@@ -8,17 +8,105 @@
     <script src="js/index.js"></script>
   </head>
   <body>
+    <!-- Header -->
     <header>
       <h1 class="headerh1">Selamat Datang di Kalkulator Matematika</h1>
-      <p class="headerp">Disini kalian bisa menghitung rumus segitiga dan juga Jajar Genjang</p>
+      <p class="headerp">Disini kalian bisa menghitung rumus Segitiga dan juga Jajar Genjang</p>
       <p class="headerp">Kalian bisa langsung menggunakan kalkulator ini dengan klik menu dibawah</p>
     </header>
+
+    <!-- Main -->
     <main>
       <section class="choosebutton">
         <button href="#" type="button" class="button_rumus" onclick="segitiga()">Segitiga</button>
-        <button href="#" type="button" class="button_rumus">Jajar Genjang</button>
+        <button href="#" type="button" class="button_rumus" onclick="jajarGenjang()">Jajar Genjang</button>
       </section>
-      <section></section>
+
+      <!-- Segitiga -->
+      <section class="konten">
+        <aside id="segitiga_content" class="isikonten">
+          <header>
+            <h1 class="header_atas">Luas Segitiga</h1>
+          </header>
+
+          <article>
+            <div class="rumus_luas_segitiga">
+              <img
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtQj3damdUMrB7NGGoc1qp7hNlWdpC_GJxnkiaA9JpyXEbPzc24PEalidWP4du9LY7s1g51LweT-7lqlh83cXAf3fTHFTZrDkSlStPgey9bv8LvWrxvV1YnGNb3VRrOXcms6o6WVSmZv4/s1600/Rumus+Luas+Segitiga.png"
+                alt="Rumus Luas Segitiga"
+              />
+            </div>
+
+            <div class="info_rumus_luas_segitiga">
+              <p>Rumus Luas Segitiga</p>
+
+              <p>Di mana :</p>
+              <p>L = Luas</p>
+              <p>a = Panjang Alas</p>
+              <p>t = Tinggi</p>
+              <hr />
+            </div>
+          </article>
+
+          <form>
+            <header>
+              <h1 class="header_bawah">Hitung Luas Segitiga</h1>
+            </header>
+
+            <label for="alas_segitiga">Alas Segitiga</label><br />
+            <input type="number" class="alas_segitiga" id="alas_segitiga" name="alas_segitiga" /><br /><br />
+            <label for="tinggi_segitiga">Tinggi Segitiga</label><br />
+            <input type="number" class="tinggi_segitiga" id="tinggi_segitiga" name="tinggi_segitiga" /><br />
+
+            <button type="button" class="button_hitung" id="hitung_segitiga" onclick="hitungSegitiga()">Hitung</button>
+
+            <p id="detail_hitung_segitiga"></p>
+            <p id="hasil_segitiga"></p>
+          </form>
+          <button class="btn_reset" onclick="resetSegitiga()">Reset</button>
+        </aside>
+
+        <!-- Jajar Genjang -->
+        <aside id="jajargenjang_content" class="isikonten">
+          <header>
+            <h1 class="header_atas">Luas Jajar Genjang</h1>
+          </header>
+
+          <article>
+            <div class="rumus_luas_jajargenjang">
+              <img src="https://i.pinimg.com/564x/7e/11/16/7e1116b65eab976c92e9592d2f903cbf.jpg" alt="Rumus Luas Jajar Genjang" class="jajargenjang_img" />
+            </div>
+
+            <div class="info_rumus_luas_jajargenjang">
+              <p>Rumus Luas Jajar Genjang</p>
+
+              <p>Di mana :</p>
+              <p>L = Luas</p>
+              <p>a = Panjang Alas</p>
+              <p>t = Tinggi</p>
+
+              <hr />
+            </div>
+          </article>
+
+          <form>
+            <header>
+              <h1 class="header_bawah">Hitung Luas Jajar Genjang</h1>
+            </header>
+
+            <label for="alas_jajargenjang">Alas Jajar Genjang</label><br />
+            <input type="number" class="alas_jajargenjang" id="alas_jajargenjang" name="alas_jajargenjang" /><br /><br />
+            <label for="tinggi_jajargenjang">Tinggi Jajar Genjang</label><br />
+            <input type="number" class="tinggi_jajargenjang" id="tinggi_jajargenjang" name="tinggi_jajargenjang" /><br />
+
+            <button type="button" class="button_hitung" id="hitung_jajargenjang" onclick="hitungJajargenjang()">Hitung</button>
+
+            <p id="detail_hitung_jajargenjang"></p>
+            <p id="hasil_jajargenjang"></p>
+          </form>
+          <button class="btn_reset" onclick="resetJajargenjang()">Reset</button>
+        </aside>
+      </section>
     </main>
   </body>
 </html>

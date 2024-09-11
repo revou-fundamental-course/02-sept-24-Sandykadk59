@@ -1,8 +1,10 @@
+/* Header */
 .headerh1,
 .headerp {
   text-align: center;
 }
 
+/* Main */
 .choosebutton {
   display: flex;
   flex-direction: column;
@@ -13,4 +15,77 @@
   margin: 5px;
   border-radius: 8px;
   border: none;
+}
+
+.konten {
+  display: flex;
+}
+
+.isikonten {
+  border: 1px solid black;
+  flex: 1;
+  position: relative;
+  padding-bottom: 30px;
+}
+
+.isikonten header .header_atas {
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin: 0px;
+  background-color: rgb(0, 68, 142);
+}
+
+.isikonten article {
+  display: flex;
+  flex-direction: column;
+}
+
+.isikonten article .rumus_luas_segitiga,
+.isikonten article .rumus_luas_jajargenjang {
+  background-size: cover;
+  background-position: center;
+  align-self: center;
+}
+
+.isikonten article .info_rumus_luas_segitiga,
+.isikonten article .info_rumus_luas_jajargenjang {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.isikonten form {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin: 0px;
+  padding-left: 40px;
+}
+
+.isikonten img {
+  padding-top: 20px;
+  height: 225px;
+}
+
+.button_hitung {
+  margin-top: 10px;
+  color: white;
+  background-color: rgb(0, 68, 142);
+  width: 100px;
+  height: 50px;
+  font-size: 17px;
+  border-radius: 5px;
+}
+
+.isikonten .btn_reset {
+  background-color: rgb(255, 145, 0);
+  width: 80px;
+  height: 40px;
+  font-size: 17px;
+  border-radius: 5px;
+  border: none;
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
 }
